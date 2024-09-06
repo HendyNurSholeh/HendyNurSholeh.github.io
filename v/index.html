@@ -19,9 +19,171 @@
         <!-- Core Stylesheet -->
         <link rel="stylesheet" href="style.css" />
         <style>
-            html {
-                scroll-behavior: smooth;
+            /* CSS untuk container */
+            .parent-single-blog-post {
+                padding: 0 !important;
+                /* Mengatur padding dengan !important */
             }
+
+            .single-blog-post {
+                border-radius: 10px !important;
+                /* Radius border dengan !important */
+                border: 1.3px solid #b9d4a1 !important;
+                /* Warna dan ketebalan border awal */
+                position: relative !important;
+                /* Agar overlay dapat diposisikan relatif */
+                overflow: hidden !important;
+
+                /* Transisi hover */
+                cursor: pointer !important;
+                /* Mengubah cursor menjadi pointer */
+            }
+
+            .single-blog-post:hover {
+                border-color: #047021 !important;
+                /* Warna border saat hover */
+                border-width: 2px !important;
+                /* Ketebalan border saat hover */
+            }
+
+            /* CSS untuk gambar dan overlay */
+            .post-thumbnail {
+                position: relative !important;
+            }
+
+            .post-thumbnail {
+                overflow: hidden !important;
+                border-radius: 10px !important;
+                width: 100% !important;
+                /* Agar gambar memenuhi container */
+                height: auto !important;
+                /* Menjaga rasio gambar */
+                transition: opacity 0.3s !important;
+                /* Transisi untuk efek overlay */
+            }
+
+            .post-thumbnail::after {
+                content: "" !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.6) !important;
+                /* Overlay hitam dengan opacity */
+                opacity: 0 !important;
+                transition: opacity 0.3s !important;
+                /* Transisi untuk efek overlay */
+                border-radius: 10px !important;
+            }
+
+            .single-blog-post:hover .post-thumbnail::after {
+                opacity: 1 !important;
+                /* Menampilkan overlay saat hover */
+            }
+
+            .single-blog-post:hover .post-thumbnail img {
+                opacity: 0.7 !important;
+                /* Mengurangi opacity gambar saat hover */
+            }
+
+            /* UNTUK LABEL */
+            /* CSS untuk label */
+            .label {
+                position: absolute;
+                /* Agar label dapat diposisikan di sudut kanan bawah */
+                bottom: 10px;
+                /* Jarak dari bawah */
+                right: 10px;
+                /* Jarak dari kanan */
+                padding: 5px 10px;
+                /* Padding untuk label */
+                border-radius: 7px;
+                /* Membuat sudut label bulat */
+                color: white;
+                /* Warna teks label */
+                font-size: 9px;
+                /* Ukuran font */
+            }
+
+            /* CSS untuk label hijau */
+            .label-green {
+                background-color: #32a852;
+                /* Warna hijau gelap */
+            }
+
+            /* CSS untuk label merah */
+            .label-red {
+                background-color: #d9534f;
+                /* Warna merah */
+            }
+
+            /* CSS untuk label biru */
+            .label-blue {
+                background-color: #007bff;
+                /* Biru terang */
+            }
+
+            /* CSS untuk label kuning */
+            .label-yellow {
+                background-color: #ffc107;
+                /* Kuning cerah */
+            }
+
+            /* CSS untuk label ungu */
+            .label-purple {
+                background-color: #6f42c1;
+                /* Ungu gelap */
+            }
+
+            /* CSS untuk label oranye */
+            .label-orange {
+                background-color: #fd7e14;
+                /* Oranye terang */
+            }
+
+            /* CSS untuk label abu-abu */
+            .label-gray {
+                background-color: #6c757d;
+                /* Abu-abu medium */
+            }
+
+            /* CSS untuk label cyan */
+            .label-cyan {
+                background-color: #17a2b8;
+                /* Cyan */
+            }
+
+            /* CSS untuk label hijau limau */
+            .label-lime {
+                background-color: #20c997;
+                /* Hijau limau */
+            }
+
+            /* Mengatur link penuh untuk mencakup seluruh konten */
+            .full-link {
+                display: block !important;
+                /* Membuat link menjadi elemen blok untuk mencakup seluruh konten */
+                text-decoration: none !important;
+                /* Menghapus garis bawah dari link */
+                color: inherit !important;
+                /* Menggunakan warna teks dari elemen parent */
+            }
+
+            /* Mengatur hover dan focus untuk link */
+            .full-link:hover,
+            .full-link:focus {
+                text-decoration: none !important;
+                /* Menghapus garis bawah saat hover/focus */
+            }
+
+            /* Menjaga gambar dan konten tetap di dalam link */
+            .single-blog-post img {
+                display: block !important;
+                /* Menghindari spasi di bawah gambar */
+            }
+
+            /* CSS untuk menyembunyikan elemen filter pada tampilan mobile */
         </style>
     </head>
 
@@ -110,6 +272,9 @@
                                 <div class="classynav">
                                     <ul>
                                         <li><a href="#home">Home</a></li>
+                                        <li>
+                                            <a href="#product">Product</a>
+                                        </li>
                                         <li><a href="#layanan">Layanan</a></li>
                                         <li><a href="#about">About</a></li>
                                         <!-- <li><a href="#">Pages</a>
@@ -140,9 +305,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="shop.html">Shop</a></li> -->
-                                        <li>
-                                            <a href="#product">Product</a>
-                                        </li>
+
                                         <li>
                                             <a href="#contact">Contact</a>
                                         </li>
@@ -211,11 +374,13 @@
                                         sini.
                                     </p>
                                     <div class="welcome-btn-group">
-                                        <a href="#" class="btn alazea-btn mr-30"
+                                        <a
+                                            href="#about"
+                                            class="btn alazea-btn mr-30"
                                             >GET STARTED</a
                                         >
                                         <a
-                                            href="#"
+                                            href="#contact"
                                             class="btn alazea-btn active"
                                             >CONTACT US</a
                                         >
@@ -252,11 +417,13 @@
                                         sini.
                                     </p>
                                     <div class="welcome-btn-group">
-                                        <a href="#" class="btn alazea-btn mr-30"
+                                        <a
+                                            href="#about"
+                                            class="btn alazea-btn mr-30"
                                             >GET STARTED</a
                                         >
                                         <a
-                                            href="#"
+                                            href="#contact"
                                             class="btn alazea-btn active"
                                             >CONTACT US</a
                                         >
@@ -269,6 +436,184 @@
             </div>
         </section>
         <!-- ##### Hero Area End ##### -->
+
+        <!-- ##### Plants Section Start ##### -->
+        <section class="our-plants section-padding-100-0">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-heading text-center">
+                            <h2>Tanaman Obat Keluarga (TOGA)</h2>
+                            <p>
+                                Kenali lima tanaman obat yang bermanfaat untuk
+                                kesehatan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div
+                        class="row justify-content-center"
+                        id="plants-container"
+                    >
+                        <!-- Plant Item 1: Jahe -->
+                        <a href="#">
+                            <div class="col-12 col-md-6 col-lg-3 p-1 mb-2">
+                                <div
+                                    class="single-blog-post border p-3 mx-2"
+                                    style="
+                                        border-radius: 10px;
+                                        border-color: #b9d4a1 !important;
+                                        height: 100% !important;
+                                    "
+                                >
+                                    <div class="post-thumbnail mb-30">
+                                        <a href="#">
+                                            <img
+                                                style="border-radius: 10px"
+                                                src="img/bg-img/19.jpg"
+                                                alt="Jahe"
+                                            />
+                                            <span class="label label-red"
+                                                >TANAMAN REMPAH</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">
+                                            <h6>Jahe - Zingiber officinale</h6>
+                                        </a>
+                                        <p class="post-excerpt">
+                                            Digunakan sebagai bumbu masak dan
+                                            obat tradisional.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Plant Item 2: Kunyit -->
+                        <a href="#">
+                            <div class="col-12 col-md-6 col-lg-3 p-1 mb-2">
+                                <div
+                                    class="single-blog-post border p-3 mx-2"
+                                    style="
+                                        border-radius: 10px;
+                                        border-color: #b9d4a1 !important;
+                                        height: 100% !important;
+                                    "
+                                >
+                                    <div class="post-thumbnail mb-30">
+                                        <a href="#">
+                                            <img
+                                                style="border-radius: 10px"
+                                                src="img/bg-img/18.jpg"
+                                                alt="Kunyit"
+                                            />
+                                            <span class="label label-yellow"
+                                                >TANAMAN OBAT</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">
+                                            <h6>Kunyit - Curcuma longa</h6>
+                                        </a>
+                                        <p class="post-excerpt">
+                                            Digunakan untuk kesehatan pencernaan
+                                            dan pewarna alami.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Plant Item 3: Lengkuas (Hidden on mobile) -->
+                        <a href="#">
+                            <div
+                                class="col-12 col-md-6 col-lg-3 p-1 mb-2 d-none d-lg-block"
+                            >
+                                <div
+                                    class="single-blog-post border p-3 mx-2"
+                                    style="
+                                        border-radius: 10px;
+                                        border-color: #b9d4a1 !important;
+                                        height: 100% !important;
+                                    "
+                                >
+                                    <div class="post-thumbnail mb-30">
+                                        <a href="#">
+                                            <img
+                                                style="border-radius: 10px"
+                                                src="img/bg-img/20.jpg"
+                                                alt="Lengkuas"
+                                            />
+                                            <span class="label label-green"
+                                                >TANAMAN REMPAH</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">
+                                            <h6>Lengkuas - Alpinia galanga</h6>
+                                        </a>
+                                        <p class="post-excerpt">
+                                            Sebagai bumbu dapur dan bahan obat
+                                            tradisional.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Plant Item 4: Serai (Hidden on mobile) -->
+                        <a href="#">
+                            <div
+                                class="col-12 col-md-6 col-lg-3 p-1 mb-2 d-none d-lg-block"
+                            >
+                                <div
+                                    class="single-blog-post border p-3 mx-2"
+                                    style="
+                                        border-radius: 10px;
+                                        border-color: #b9d4a1 !important;
+                                        height: 100% !important;
+                                    "
+                                >
+                                    <div class="post-thumbnail mb-30">
+                                        <a href="#">
+                                            <img
+                                                style="border-radius: 10px"
+                                                src="img/bg-img/19.jpg"
+                                                alt="Serai"
+                                            />
+                                            <span class="label label-red"
+                                                >TANAMAN OBAT</span
+                                            >
+                                        </a>
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="#" class="post-title">
+                                            <h6>Serai - Cymbopogon citratus</h6>
+                                        </a>
+                                        <p class="post-excerpt">
+                                            Bumbu masakan dan pengobatan
+                                            tradisional.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="col-12 text-center mb-5">
+                            <a href="#" class="btn alazea-btn active"
+                                >Lihat Semua</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ##### Plants Section End ##### -->
 
         <!-- ##### Service Area Start ##### -->
         <section
