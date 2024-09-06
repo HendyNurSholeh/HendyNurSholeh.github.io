@@ -19,6 +19,9 @@
         <!-- Core Stylesheet -->
         <link rel="stylesheet" href="style.css" />
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
             /* CSS untuk container */
             .parent-single-blog-post {
                 padding: 0 !important;
@@ -438,7 +441,7 @@
         <!-- ##### Hero Area End ##### -->
 
         <!-- ##### Plants Section Start ##### -->
-        <section class="our-plants section-padding-100-0">
+        <section class="our-plants section-padding-100-0" id="product">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
@@ -469,16 +472,50 @@
                                     "
                                 >
                                     <div class="post-thumbnail mb-30">
-                                        <a href="#">
-                                            <img
-                                                style="border-radius: 10px"
-                                                src="img/bg-img/19.jpg"
-                                                alt="Jahe"
-                                            />
-                                            <span class="label label-red"
-                                                >TANAMAN REMPAH</span
-                                            >
-                                        </a>
+                                        <div
+                                            id="product_details_slider"
+                                            class="carousel slide"
+                                            data-ride="carousel"
+                                        >
+                                            <div class="carousel-inner">
+                                                <div
+                                                    class="carousel-item active"
+                                                >
+                                                    <span
+                                                        class="product-img"
+                                                        title="Product Image"
+                                                    >
+                                                        <img
+                                                            class="d-block w-100"
+                                                            src="img/bg-img/19.jpg"
+                                                            alt="1"
+                                                        />
+                                                        <span
+                                                            class="label label-red"
+                                                            >TANAMAN
+                                                            REMPAH</span
+                                                        >
+                                                    </span>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <span
+                                                        class="product-img"
+                                                        title="Product Image"
+                                                    >
+                                                        <img
+                                                            class="d-block w-100"
+                                                            src="img/bg-img/18.jpg"
+                                                            alt="1"
+                                                        />
+                                                        <span
+                                                            class="label label-red"
+                                                            >TANAMAN
+                                                            REMPAH</span
+                                                        >
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="post-content">
                                         <a href="#" class="post-title">
