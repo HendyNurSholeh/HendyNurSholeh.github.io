@@ -517,7 +517,7 @@
                                 >
                                     <div class="post-thumbnail mb-30">
                                         <div
-                                            id="product_details_slider"
+                                            id="carousel1"
                                             class="carousel slide"
                                             data-ride="carousel"
                                         >
@@ -587,7 +587,7 @@
                                 >
                                     <div class="post-thumbnail mb-30">
                                         <div
-                                            id="product_details_slider"
+                                            id="carousel2"
                                             class="carousel slide"
                                             data-ride="carousel"
                                         >
@@ -657,7 +657,7 @@
                                 >
                                     <div class="post-thumbnail mb-30">
                                         <div
-                                            id="product_details_slider"
+                                            id="carousel3"
                                             class="carousel slide"
                                             data-ride="carousel"
                                         >
@@ -727,7 +727,7 @@
                                 >
                                     <div class="post-thumbnail mb-30">
                                         <div
-                                            id="product_details_slider"
+                                            id="carousel4"
                                             class="carousel slide"
                                             data-ride="carousel"
                                         >
@@ -1513,5 +1513,31 @@
         <script src="js/plugins/plugins.js"></script>
         <!-- Active js -->
         <script src="js/active.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Initialize carousel manually
+                $("#carousel1").carousel({
+                    interval: 3000, // Time in ms
+                });
+
+                setTimeout(function () {
+                    $("#carousel2").carousel({
+                        interval: 3000,
+                    });
+                }, 1000); // Delay second carousel by 1 second
+
+                setTimeout(function () {
+                    $("#carousel3").carousel({
+                        interval: 3000,
+                    });
+                }, 2000); // Delay third carousel by 2 seconds
+
+                setTimeout(function () {
+                    $("#carousel4").carousel({
+                        interval: 3000,
+                    });
+                }, 3000); // Delay fourth carousel by 3 seconds
+            });
+        </script>
     </body>
 </html>
