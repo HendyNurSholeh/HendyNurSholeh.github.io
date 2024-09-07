@@ -186,6 +186,16 @@
                 /* Menghindari spasi di bawah gambar */
             }
 
+            /* Membuat sudut melengkung dan bayangan */
+            .custom-video {
+                border-radius: 13px; /* Membuat sudut melengkung */
+                overflow: hidden; /* Agar radius bekerja dengan benar */
+            }
+
+            /* Mengatur ukuran iframe dan membuatnya mengikuti border-radius */
+            .custom-video iframe {
+                border-radius: 13px;
+            }
             /* CSS untuk menyembunyikan elemen filter pada tampilan mobile */
         </style>
     </head>
@@ -399,49 +409,6 @@
                     <!-- Post Image -->
                     <div
                         class="slide-img bg-img"
-                        style="background-image: url(img/bg-img/edu3.jpg)"
-                    ></div>
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <div class="col-12">
-                                <!-- Post Content -->
-                                <div class="hero-slides-content text-center">
-                                    <h2>
-                                        Eduwisata Desa Tirtajaya: Jelajahi
-                                        Keajaiban Tanaman Obat Keluarga
-                                    </h2>
-                                    <p>
-                                        Temukan manfaat luar biasa dari tanaman
-                                        obat keluarga seperti jahe, kunyit, dan
-                                        temulawak di Eduwisata Desa Tirtajaya.
-                                        Kami mengajak Anda untuk belajar,
-                                        menikmati alam, serta memahami kekayaan
-                                        tanaman herbal yang tumbuh subur di
-                                        sini.
-                                    </p>
-                                    <div class="welcome-btn-group">
-                                        <!-- <a
-                                            href="#about"
-                                            class="btn alazea-btn mr-30"
-                                            >GET STARTED</a
-                                        > -->
-                                        <a
-                                            href="#contact"
-                                            class="btn alazea-btn active"
-                                            >CONTACT US</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Hero Post -->
-                <div class="single-hero-post bg-overlay">
-                    <!-- Post Image -->
-                    <div
-                        class="slide-img bg-img"
                         style="background-image: url(img/bg-img/edu2.jpg)"
                     ></div>
                     <div class="container h-100">
@@ -486,6 +453,49 @@
                     <div
                         class="slide-img bg-img"
                         style="background-image: url(img/bg-img/edu4.jpg)"
+                    ></div>
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12">
+                                <!-- Post Content -->
+                                <div class="hero-slides-content text-center">
+                                    <h2>
+                                        Eduwisata Desa Tirtajaya: Jelajahi
+                                        Keajaiban Tanaman Obat Keluarga
+                                    </h2>
+                                    <p>
+                                        Temukan manfaat luar biasa dari tanaman
+                                        obat keluarga seperti jahe, kunyit, dan
+                                        temulawak di Eduwisata Desa Tirtajaya.
+                                        Kami mengajak Anda untuk belajar,
+                                        menikmati alam, serta memahami kekayaan
+                                        tanaman herbal yang tumbuh subur di
+                                        sini.
+                                    </p>
+                                    <div class="welcome-btn-group">
+                                        <!-- <a
+                                            href="#about"
+                                            class="btn alazea-btn mr-30"
+                                            >GET STARTED</a
+                                        > -->
+                                        <a
+                                            href="#contact"
+                                            class="btn alazea-btn active"
+                                            >CONTACT US</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Hero Post -->
+                <div class="single-hero-post bg-overlay">
+                    <!-- Post Image -->
+                    <div
+                        class="slide-img bg-img"
+                        style="background-image: url(img/bg-img/edu5.jpg)"
                     ></div>
                     <div class="container h-100">
                         <div class="row h-100 align-items-center">
@@ -906,43 +916,65 @@
                     <div class="col-12 col-lg-12">
                         <div class="alazea-service-area mb-0 row">
                             <!-- Single Service Area -->
-                            <div
-                                class="single-service-area col-lg-6 d-flex align-items-center wow fadeInUp"
-                                data-wow-delay="100ms"
-                            >
-                                <!-- Icon -->
-                                <div class="service-icon mr-30">
-                                    <img src="img/core-img/s1.png" alt="" />
+                            <div class="col-12 col-lg-5">
+                                <div
+                                    class="single-service-area d-flex align-items-center wow fadeInUp"
+                                    data-wow-delay="100ms"
+                                >
+                                    <!-- Icon -->
+                                    <div class="service-icon mr-30">
+                                        <img src="img/core-img/s1.png" alt="" />
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="service-content">
+                                        <h5>Tur Eduwisata Tanaman Obat</h5>
+                                        <p style="text-align: justify">
+                                            Ikuti tur edukasi yang
+                                            memperkenalkan beragam tanaman obat
+                                            seperti jahe, kunyit, dan temulawak.
+                                            Pelajari langsung dari alam cara
+                                            menanam dan manfaat dari tanaman
+                                            tersebut.
+                                        </p>
+                                    </div>
                                 </div>
-                                <!-- Content -->
-                                <div class="service-content">
-                                    <h5>Tur Eduwisata Tanaman Obat</h5>
-                                    <p style="text-align: justify">
-                                        Ikuti tur edukasi yang memperkenalkan
-                                        beragam tanaman obat seperti jahe,
-                                        kunyit, dan temulawak. Pelajari langsung
-                                        dari alam cara menanam dan manfaat dari
-                                        tanaman tersebut.
-                                    </p>
+                                <div
+                                    class="single-service-area mb-5 mb-lg-0 d-flex align-items-center wow fadeInUp"
+                                    data-wow-delay="100ms"
+                                >
+                                    <!-- Icon -->
+                                    <div class="service-icon mr-30">
+                                        <img src="img/core-img/s3.png" alt="" />
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="service-content">
+                                        <h5>Penjualan Produk Herbal</h5>
+                                        <p style="text-align: justify">
+                                            Kunjungi toko kami yang menawarkan
+                                            berbagai produk herbal hasil dari
+                                            tanaman obat lokal, seperti minyak
+                                            herbal, teh, dan ramuan tradisional.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                class="single-service-area col-lg-6 d-flex align-items-center wow fadeInUp"
-                                data-wow-delay="100ms"
-                            >
-                                <!-- Icon -->
-                                <div class="service-icon mr-30">
-                                    <img src="img/core-img/s3.png" alt="" />
-                                </div>
-                                <!-- Content -->
-                                <div class="service-content">
-                                    <h5>Penjualan Produk Herbal</h5>
-                                    <p style="text-align: justify">
-                                        Kunjungi toko kami yang menawarkan
-                                        berbagai produk herbal hasil dari
-                                        tanaman obat lokal, seperti minyak
-                                        herbal, teh, dan ramuan tradisional.
-                                    </p>
+
+                            <div class="col-12 col-lg-6">
+                                <div
+                                    class="alazea-video-area bg-overlay mb-100 custom-video"
+                                >
+                                    <!-- Gunakan Bootstrap embed-responsive untuk membuat iframe responsif -->
+                                    <div
+                                        class="embed-responsive embed-responsive-16by9"
+                                    >
+                                        <iframe
+                                            class="embed-responsive-item"
+                                            src="https://www.youtube.com/embed/qmEQS33sffk?si=g8gdN_h1Gkqt6moE"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
                                 </div>
                             </div>
 
